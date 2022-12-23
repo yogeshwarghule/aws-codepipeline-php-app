@@ -8,6 +8,7 @@ phases:
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 316026101470.dkr.ecr.ap-south-1.amazonaws.com
   build:
     commands:
+      - cd ecs-demo-php-app
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t php-application-2022 .
