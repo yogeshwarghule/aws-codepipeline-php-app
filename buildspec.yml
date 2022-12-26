@@ -21,5 +21,13 @@ phases:
 artifacts:
     files:
       - imageDetail.json
-      - imageDetail.json
       - appspec.json
+    secondary-artifacts:
+      DefinitionArtifact:
+        files:
+          - appspec.json
+      ImageArtifact:
+        files:
+          - imageDetail.json
+          
+      
