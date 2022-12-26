@@ -21,3 +21,5 @@ phases:
 artifacts:
     files:
       - imageDetail.json
+      - imageDetail.json
+      - appspec.json
