@@ -18,3 +18,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 316026101470.dkr.ecr.ap-south-1.amazonaws.com/php-application-2022:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"hello-world","imageUri":"%s"}]' 316026101470.dkr.ecr.ap-south-1.amazonaws.com/php-application-2022:latest > imagedefinitions.json
+artifacts:
+      files: imagedefinitions.json
