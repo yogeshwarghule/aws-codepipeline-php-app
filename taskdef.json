@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "web1",
-            "image": "<IMAGE_NAME>",
+            "image": "316026101470.dkr.ecr.ap-south-1.amazonaws.com/php-application-2022:9b456cd",
             "essential": true,
             "portMappings": [
                 {
@@ -20,5 +20,5 @@
     "networkMode": "awsvpc",
     "cpu": "256",
     "memory": "512",
-    "family": "ecs-demo"
+    "family": "task-defi"
 }
