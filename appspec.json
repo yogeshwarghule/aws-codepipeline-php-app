@@ -3,8 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        Family: "task-defi"
-        TaskDefinition: "arn:aws:ecs:ap-south-1:316026101470:task-definition/task-defi:14"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:316026101470:task-definition/task-defi:24"
         LoadBalancerInfo:
-          ContainerName: "php-container"
+          ContainerName: "web1"
           ContainerPort: 80
