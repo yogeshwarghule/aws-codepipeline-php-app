@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "web1",
-            "image": "<IMAGE_NAME>",
+            "image": "<IMAGE_URI>",
             "essential": true,
             "portMappings": [
                 {
