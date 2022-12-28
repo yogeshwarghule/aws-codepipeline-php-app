@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "web1",
-            "image": "316026101470.dkr.ecr.ap-south-1.amazonaws.com/php-application-2022:latest",
+            "image": "<IMAGE_NAME>",
             "essential": true,
             "portMappings": [
                 {
