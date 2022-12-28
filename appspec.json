@@ -7,3 +7,6 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "web1"
           ContainerPort: 80
+
+
+
