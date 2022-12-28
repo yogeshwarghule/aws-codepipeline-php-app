@@ -23,6 +23,6 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - printf '{"ImageURI":"316026101470.dkr.ecr.ap-south-1.amazonaws.com/php-application-2022:latest"}' > imageDetail.json
-  artifacts:
-    files:
-      - imageDetail.json
+artifacts:
+  files:
+    - imageDetail.json
