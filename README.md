@@ -2,9 +2,14 @@
 
 Welcome to this PHP application! This application is designed to be deployed using AWS CodePipeline and Amazon Elastic Container Service (ECS).
 
+
+![Alt Text](https://github.com/yogeshwarghule/ecs-demo-php-app/blob/main/snapshots/0.png)
+
 ## Prerequisites
 
 Before you can deploy this application, you will need to set up your AWS environment. This includes creating an AWS account, setting up an IAM user with appropriate permissions, and installing and configuring the AWS CLI.
+
+
 ![Alt Text](https://github.com/yogeshwarghule/ecs-demo-php-app/blob/main/snapshots/1.png)
 
 
@@ -23,6 +28,9 @@ To deploy this application using AWS CodePipeline and Amazon ECS, follow these s
 6. Create an AWS CodeCommit repository to store your application code in.
 7. Create an AWS CodePipeline to automate the process of building, testing, and deploying your application.
 8. Configure your CodePipeline to specify the details of your deployment process, including the source code repository, the build and test actions to be performed, and the deployment target (your ECS service). You will also need to specify the triggers that will cause your CodePipeline to be executed, such as changes to your source code or the completion of a previous stage in the pipeline.
+
+![Alt Text](https://github.com/yogeshwarghule/ecs-demo-php-app/blob/main/snapshots/10.png)
+
 
 ## Maintenance
 
