@@ -5,6 +5,8 @@ Welcome to this PHP application! This application is designed to be deployed usi
 ## Prerequisites
 
 Before you can deploy this application, you will need to set up your AWS environment. This includes creating an AWS account, setting up an IAM user with appropriate permissions, and installing and configuring the AWS CLI.
+![Alt Text](https://github.com/yogeshwarghule/ecs-demo-php-app/blob/main/snapshots/1.png)
+
 
 You will also need to create a container image that contains your application code and any dependencies. This can be done using a Dockerfile or by building an image from an existing container registry.
 
