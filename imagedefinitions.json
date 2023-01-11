@@ -1,6 +1,6 @@
 [
     {
-        "name": "web1",
-        "imageUri": "316026101470.dkr.ecr.ap-south-1.amazonaws.com/php-application-2022:31b7ae2"
+        "name": "themagic5-test-internal",
+        "imageUri": "814247870303.dkr.ecr.us-west-2.amazonaws.com/themagic5-test-internal:latest"
     }
 ]
