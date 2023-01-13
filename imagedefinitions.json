@@ -1,6 +1,6 @@
 [
     {
         "name": "themagic5-test-internal",
-        "imageUri": "814247870303.dkr.ecr.us-west-2.amazonaws.com/themagic5-test-internal:latest"
+        "imageUri": "814247870303.dkr.ecr.us-west-2.amazonaws.com/themagic5-test-internal:"
     }
 ]
