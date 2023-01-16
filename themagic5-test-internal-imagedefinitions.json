@@ -1,1 +1,1 @@
-[{"name":"themagic5-test-internal","imageUri":"%s"}]
+[{"name":"themagic5-test-internal","imageUri":"$COMMIT_HASH"}]
