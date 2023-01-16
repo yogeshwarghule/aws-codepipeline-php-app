@@ -15,13 +15,13 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:$COMMIT_HASH .
-      - docker tag $REPOSITORY_URI:$COMMIT_HASH $REPOSITORY_URI:latest
+      - docker tag $REPOSITORY_URI:$COMMIT_HASH $REPOSITORY_URI:$COMMIT_HASH
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:$COMMIT_HASH
-      - docker push $REPOSITORY_URI:latest
+   
       
       - echo Writing image definitions file...
       - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $REPOSITORY_URI:$COMMIT_HASH > themagic5-test-internal-imagedefinitions.json
