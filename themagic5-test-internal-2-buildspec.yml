@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 814247870303.dkr.ecr.us-west-2.amazonaws.com
+
+      - REPOSITORY_URI=814247870303.dkr.ecr.us-west-2.amazonaws.com/themagic5-test-internal
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $REPOSITORY_URI:$COMMIT_HASH .
+      - docker tag $REPOSITORY_URI:$COMMIT_HASH $REPOSITORY_URI:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker push $REPOSITORY_URI:$COMMIT_HASH
+      - docker push $REPOSITORY_URI:latest
+      
+      - echo Writing image definitions file...
+      - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $REPOSITORY_URI:$COMMIT_HASH > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
