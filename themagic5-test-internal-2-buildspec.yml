@@ -24,6 +24,6 @@ phases:
       - docker push $REPOSITORY_URI:latest
       
       - echo Writing image definitions file...
-      - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $REPOSITORY_URI:$COMMIT_HASH > imagedefinitions.json
+      - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $REPOSITORY_URI:$COMMIT_HASH > themagic5-test-internal-imagedefinitions.json
 artifacts:
-    files: imagedefinitions.json
+    files: themagic5-test-internal-imagedefinitions.json
