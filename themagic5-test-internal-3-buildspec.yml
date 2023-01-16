@@ -21,7 +21,7 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > themagic5-test-internal-imagedefinitions.json
 artifacts:
   files:
-    - imagedefinitions.json
+    - themagic5-test-internal-imagedefinitions.json
