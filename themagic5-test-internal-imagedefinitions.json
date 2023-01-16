@@ -1,1 +1,1 @@
-[{"name":"themagic5-test-internal","imageUri":"$COMMIT_HASH"}]
+[{"name":"themagic5-test-internal","imageUri":"$CODEBUILD_RESOLVED_SOURCE_VERSION"}]
