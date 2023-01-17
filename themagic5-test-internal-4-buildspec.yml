@@ -18,7 +18,9 @@ phases:
       - echo Pushing the Docker image...
       - docker push $IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
       - docker push $IMAGE_REPO_NAME:latest  
+      
       - printf '[{"name":"themagic5-test-internal","imageUri":"%s"}]' $IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION > themagic5-test-internal-imagedefinitions.json
+      - echo themagic5-test-internal-imagedefinitions.json
 artifacts:
   files:
     - themagic5-test-internal-imagedefinitions.json
